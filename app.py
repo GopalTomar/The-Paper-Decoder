@@ -103,7 +103,7 @@ class PaperExplainerApp:
     
     def _display_header(self):
         """Display the application header."""
-        st.markdown('<div class="main-header">arXiv Paper Explainer & Q&A System</div>', unsafe_allow_html=True)
+        st.markdown('<div class="main-header">Drishti Yantra</div>', unsafe_allow_html=True)
         st.markdown('<div class="sub-header">AI-powered research paper analysis using Retrieval-Augmented Generation</div>', unsafe_allow_html=True)
         
         # Display system status
