@@ -103,7 +103,7 @@ class PaperExplainerApp:
     
     def _display_header(self):
         """Display the application header."""
-        st.markdown('<div class="main-header">Drishti Yantra</div>', unsafe_allow_html=True)
+        st.markdown('<div class="main-header">ॐ  Drishti Yantra  ॐ</div>', unsafe_allow_html=True)
         st.markdown('<div class="sub-header">AI-powered research paper analysis using Retrieval-Augmented Generation</div>', unsafe_allow_html=True)
         
         # Display system status
@@ -414,7 +414,7 @@ class PaperExplainerApp:
     
     def _display_welcome_screen(self):
         """Display welcome screen when no paper is loaded."""
-        st.header("Welcome to arXiv Paper Explainer!")
+        st.header("Welcome to ॐ  Drishti Yantra  ॐ!")
         
         st.markdown("""
         ### How it works:
