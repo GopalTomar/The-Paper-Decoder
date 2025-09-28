@@ -414,7 +414,7 @@ class PaperExplainerApp:
     
     def _display_welcome_screen(self):
         """Display welcome screen when no paper is loaded."""
-        st.header("Welcome to ॐ  Drishti Yantra  ॐ!")
+        st.header("Welcome to ✦ DRISHTI YANTRA ✦!")
         
         st.markdown("""
         ### How it works:
