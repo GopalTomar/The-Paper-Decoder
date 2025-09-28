@@ -1,0 +1,34 @@
+# Core Streamlit and web framework
+streamlit>=1.28.0
+
+# LangChain core and components
+langchain>=0.1.0
+langchain-groq>=0.1.5
+langchain-community>=0.0.20
+langchain-huggingface>=0.0.3
+
+# Vector database - using FAISS instead of ChromaDB for better compatibility
+faiss-cpu>=1.7.4
+
+# PDF and document processing
+arxiv>=2.1.0
+pypdf>=3.0.1
+
+# ML and embeddings
+sentence-transformers>=2.2.2
+transformers>=4.30.0
+torch>=2.0.0
+
+# HTTP and networking
+requests>=2.31.0
+urllib3>=2.0.0
+certifi>=2023.7.22
+
+# Utilities
+python-dotenv>=1.0.0
+typing-extensions>=4.7.1
+numpy>=1.24.0
+
+# Visualization
+plotly>=5.15.0
+pandas>=2.0.0
