@@ -10,15 +10,15 @@ import time
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# LangChain imports
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
+# LangChain imports - FIXED for new LangChain structure
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 from langchain_groq import ChatGroq
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.schema.runnable import RunnablePassthrough
-from langchain.schema.output_parser import StrOutputParser
-from langchain.prompts import ChatPromptTemplate
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
 
 from config import Config
 from utils import display_error, display_success, format_response_with_sources
@@ -325,7 +325,7 @@ class RAGSystem:
                 return False
             
             # Test the retriever
-            test_results = self.retriever.get_relevant_documents("test query")
+            test_results = self.retriever.invoke("test query")
             if not test_results:
                 st.warning("Retriever created but test query returned no results")
             
@@ -412,7 +412,7 @@ You are an expert AI assistant helping users understand research papers. Use the
                 return "Error: RAG system not properly initialized. Please process a paper first.", []
             
             # Get relevant documents for sources
-            relevant_docs = self.retriever.get_relevant_documents(question)
+            relevant_docs = self.retriever.invoke(question)
             
             if not relevant_docs:
                 return "No relevant content found in the paper for this question. Try rephrasing your question or asking about different aspects of the paper.", []
