@@ -1,21 +1,15 @@
-# Core Frameworks
 streamlit
 langchain
-langchain-core
 langchain-community
-
-# LLM & Embeddings
+langchain-core
+langchain-text-splitters
 langchain-groq
 langchain-huggingface
 sentence-transformers
 faiss-cpu
-
-# Data & API Handling
 arxiv
 pypdf
 python-dotenv
 requests
 pandas
-
-# Visualization
 plotly
